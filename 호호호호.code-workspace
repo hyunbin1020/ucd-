@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "-4-",
+			"path": "-4-"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "-4-",
+		"liveServer.settings.port": 5501
+	}
+}

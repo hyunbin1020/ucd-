@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    background-color: #ffffff; 
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255,143,0,0.07), rgba(255,193,91,0.37) 35%, rgba(255,203,109,0.35) 65%, rgba(255,244,185,0.22));
+    min-height: 100vh;
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 40px;
+    background: white;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 70px; 
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px 40px;
+    background: white;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; 
+}
+
+.top-nav ul li {
+    display: inline-block;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.top-nav ul li a:hover {
+    color: #ff9900;
+    border-bottom: 2px solid #ff9900; /* 마우스 오버시 밑줄 */
+}
+
+.sub-nav {
+    text-align: center;
+    padding: 10px 0;
+    background: white;
+    border-bottom: 2px solid #ddd;
+}
+
+.sub-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.sub-nav ul li {
+    display: inline-block;
+}
+
+.sub-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+
+.sub-nav ul li a:hover {
+    color: #ff9900;
+    border-bottom: 2px solid #ff9900; /* 마우스 오버시 밑줄 */
+}
+
+.nav-bar {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-bar ul li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -6px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 6px;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.nav-bar ul li a:hover {
+    color: #ff9900;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    flex-wrap: nowrap;
+    margin-top: 150px !important; /* 간격 더 증가 */
+    margin-bottom: 80px !important; /* 아래쪽 간격 증가 */
+    padding-top: 40px !important; /* 내부 여백 증가 */
+    padding-bottom: 40px !important;
+}
+
+.stats-left p {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+}
+
+.stats-left span {
+    font-size: 40px; 
+    font-weight: bold;
+    display: inline-block;
+    min-width: 70px; 
+    text-align: right; 
+}
+
+
+.stats-right {
+    flex-grow: 0; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto; 
+}
+
+.stats-right img {
+    width: 145px; /* 140px보다 크지만 150px보다 작게 설정 */
+    height: auto;
+    max-width: 100%;
+    margin-right:-10px;
+
+    .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+        padding: 80px 20px !important; /* 위아래 간격 늘림 */
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 60px !important; /* 간격 추가 */
+}
+}
+.about-container img {
+    width: 140px; 
+    flex-shrink: 0; 
+}
+
+.about-text {
+    flex-grow: 1;
+    max-width: 600px;
+    text-align: left; /* ✅ 전체를 왼쪽 정렬 */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 2; /* ✅ 줄 간격을 넓혀 가독성 향상 */
+    text-align: justify; /* ✅ 좌우 균등 정렬 */
+    max-width: 500px; /* ✅ 문장 길이를 제한 */
+    margin-top: 10px; /* ✅ 위쪽 간격 추가 */
+}
+
+.about-text h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 13px; /* ✅ 제목과 본문 사이 간격 추가 */
+}
+
+
+.about-text span {
+    color: #EE7535; 
+    font-weight: bold;
+}
+.projects-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.projects-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.intro {
+    text-align: center;  /* 가운데 정렬 */
+    margin-top: 100px;   /* 상단 여백 추가 */
+    padding-top: 50px;   /* 내부 여백 추가 */
+}
+
+
+/* 프로젝트 리스트 */
+.project-list {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* 이미지 간격 동일하게 조정 */
+    align-items: center;
+    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
+}
+
+/* 프로젝트 개별 박스 */
+.project {
+    flex-grow: 1; /* 크기 자동 조정 */
+    text-align: center;
+    width: 300px; /* 모든 프로젝트 크기 동일하게 */
+}
+
+/* 프로젝트 이미지 스타일 */
+.project img {
+    width: 280px; /* 이미지 크기 동일하게 */
+    height: 220px; /* 비율 유지하면서 동일 크기 */
+    object-fit: cover; /* 이미지 비율 유지하면서 박스에 맞게 조정 */
+    border-radius: 15px; /* 둥근 모서리 유지 */
+    transition: transform 0.3s ease-in-out; /* 마우스 올릴 때 애니메이션 */
+}
+
+/* 마우스 올릴 때 확대 효과 */
+.project img:hover {
+    transform: scale(1.05);
+}
+
+/* 프로젝트 설명 */
+.project p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.sub-nav {
+    text-align: center;
+    padding: 10px 0;
+    background: white; /* 기본 배경 */
+    border-bottom: 2px solid #ddd;
+    position: relative;
+}
+.recruit-container {
+    text-align: center;
+    margin-top: 50px; /* 위쪽 여백 */
+}
+
+.recruit-container p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #E0E0E0;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.apply-button:hover {
+    background-color: #C0C0C0;
+}
+.highlight-text {
+    font-weight: bold;
+    color: #EE7535; /* 강조 색상 */    
+}
+
+footer {
+    background: #fff;
+    border-top: 2px solid #ddd;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* 🔹 로고와 텍스트를 가로 정렬 */
+.logo-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 로고와 텍스트 사이 간격 */
+}
+
+.footer-logo {
+    width: 150px; /* 로고 크기 */
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 3px 0;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}

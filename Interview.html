@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 인터뷰</title>
+    <link rel="stylesheet" href="Interview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .intro h2 {
+            font-size: 63px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .intro p {
+            font-size: 50px;
+            margin-top: 25px;
+        }
+
+        .highlight {
+            color: #EE7535;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 80px auto;
+            /* 간격 증가 */
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .stats-left {
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .stats-right {
+            text-align: right;
+        }
+
+        .stats-right img {
+            width: 120px;
+        }
+
+        /* 숫자 색상 및 크기 지정 */
+        .number-30 {
+            color: #2AF0B8;
+            font-size: 40px;
+        }
+
+        .number-10 {
+            color: #F10F0F;
+            font-size: 40px;
+        }
+
+        .number-130 {
+            color: #FD990D;
+            font-size: 40px;
+        }
+
+        .number-8400 {
+            color: #2875C9;
+            font-size: 40px;
+        }
+
+        .number-1000 {
+            color: #20C92B;
+            font-size: 40px;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+
+        .about-container img {
+            width: 180px;
+            /* 로고 크기 조정 */
+            flex-shrink: 0;
+        }
+
+        .about-text {
+            flex-grow: 1;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .about-text h2 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .about-text span {
+            color: #EE7535;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/uc_davis_logo.png" alt="UC Davis Logo">
+                <img src="images/uc_davis_seal.png" alt="UC Davis Seal">
+            </div>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="멋쟁이사자.html">홈</a></li>
+                    <li><a href="about.html">About LIKE LION</a></li>
+                    <li><a href="projects.html">프로젝트</a></li>
+                    <li><a href="events.html">이벤트</a></li>
+                    <li><a href="members.html">멤버</a></li>
+                    <li><a href="community.html">커뮤니티</a></li>
+                    <li><a href="contact.html">연락처</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="sub-nav">
+            <ul>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="gallery.html">멋사 활동 갤러리</a></li>
+                <li><a href="Interview.html">인터뷰/우수 프로젝트</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <details>
+                <summary><i class="fas fa-chevron-right"></i> 멋사 활동 후기</summary>
+                <details>
+                    <summary><i class="fas fa-chevron-right"></i> 멋사 멤버 인터뷰</summary>
+                    <ul>
+                        <li><a href="#">우수회원 / 채진우</a></li>
+                        <li><a href="#">개근회원 / 최현빈</a></li>
+                        <li><a href="#">노력회원 / 백지원</a></li>
+                        <li><a href="#">Non-STEM / 한나경</a></li>
+                        <li><a href="#">임원 / 김민형</a></li>
+                    </ul>
+                </details>
+            </details>
+
+            <<details>
+                <summary onclick="location.href='ideathon.html';" style="cursor: pointer;">
+                    <i class="fas fa-chevron-right"></i> 우수 프로젝트
+                </summary>
+                <details>
+                    <summary><i class="fas fa-chevron-right"></i> 아이디어톤</summary>
+                    <ul>
+                        <li><a href="#">데일리 가든</a></li>
+                        <li><a href="#">Eegloo</a></li>
+                        <li><a href="#">스캠싫소</a></li>
+                    </ul>
+                </details>
+            </details>
+            
+                  
+                  <!-- 해커톤 as an expandable (or clickable) item -->
+                  <details>
+                    <summary><i class="fas fa-chevron-right"></i> 해커톤</summary>
+                    <!-- If you plan to add nested items later, include them in a list here -->
+                    <!-- For now, it can function just as an expandable header -->
+                  </details>
+            </details>
+        </div>
+
+        <div class="main-content">
+            <div class="image-container">
+                <img src="images/main_interview.png" alt="Main Interview">
+            </div>
+            <div class="page-title">
+                <h1>멋사 멤버 인터뷰</h1>
+            </div>
+            <div class="page-script">
+                <p>멋사에서는 다양한 경험과 배경을 가진 멤버들이 함께 합니다. 각자의 여정을 통해 성장한 이야기들을 들어보세요</p>
+            </div>
+            <div class="example-image-container">
+                <img src="images/example.jpg" alt="Example Image">
+            </div>
+            <!-- Other main content -->
+            <div class="info-blocks">
+                <div class="info-block">
+                  <div class="info-text">
+                    <h2>임원 / 김민형</h2>
+                    <p>“전문 분야라고 하기에는 부족했던 코딩, 멋쟁이사자처럼 덕분에 이제는 단순한 학습을 넘어 사용자들이 필요로 하는 서비스를 기획/개발해 보고 싶어요!”</p>
+                  </div>
+                  <div class="info-image">
+                    <img src="images/minhyung.jpg" alt="Info 1">
+                  </div>
+                </div>
+                <div class="info-block">
+                  <div class="info-text">
+                    <h2>우수 회원 / 채진우</h2>
+                    <p>"코딩이 낯설었던 내가, 이제는 데이터 분석과 웹 개발을 꿈꿉니다"</p>
+                  </div>
+                  <div class="info-image">
+                    <img src="images/jinwoo.jpg" alt="Info 2">
+                  </div>
+                </div>
+                <div class="info-block">
+                  <div class="info-text">
+                    <h2>개근 회원 / 최현빈</h2>
+                    <p>"멋쟁이사자처럼에서 함께 성장하며 코딩에 대한 자신감을 얻었어요!"</p>
+                  </div>
+                  <div class="info-image">
+                    <img src="images/hyunbin.png" alt="Info 3">
+                  </div>
+                </div>
+                <div class="info-block">
+                  <div class="info-text">
+                    <h2>노력 회원 / 백지원</h2>
+                    <p>"멋사에서 협업과 실전 경험을 통해 개발 역량을 확장하고 새로운 도전에 대한 자신감을 얻었어요!"</p>
+                  </div>
+                  <div class="info-image">
+                    <img src="images/jiwon.jpg" alt="Info 4">
+                  </div>
+                </div>
+                <div class="info-block">
+                  <div class="info-text">
+                    <h2>Non-Stem major / 한나경</h2>
+                    <p>"코딩을 이용해서 사용자의 행동과 니즈를 반영한 실용적인 디자인을 연구하고 싶어요"</p>
+                  </div>
+                  <div class="info-image">
+                    <img src="images/nakyung.jpg" alt="Info 5">
+                  </div>
+                </div>
+              </div>
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <script>
+        document.querySelectorAll("details").forEach(parent => {
+            parent.addEventListener("toggle", function () {
+                if (!this.open) {
+                    this.querySelectorAll("details").forEach(child => {
+                        child.open = false; // Close all nested details when parent closes
+                    });
+                }
+            });
+        });
