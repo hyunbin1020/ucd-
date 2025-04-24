@@ -1,68 +1,655 @@
-/* -------------------------------
-   공지사항 카드 슬라이드 스타일
--------------------------------- */
-.notice-section {
-    background-color: #fffaf5;
-    padding: 60px 20px;
-  }
-  
-  .section-title {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255,143,0,0.07), rgba(255,193,91,0.37) 35%, rgba(255,203,109,0.35) 65%, rgba(255,244,185,0.22));
+    min-height: 100vh;
+}
+
+/* 헤더 스타일 */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 40px;
+    background: white;
+    border-bottom: 2px solid #ddd;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 70px; 
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px 40px;
+    background: white;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; 
+}
+
+.top-nav ul li {
+    display: inline-block;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.top-nav ul li a:hover {
+    color: #EE7535;
+    border-bottom: 2px solid #EE7535; /* 마우스 오버시 밑줄 */
+}
+
+.sub-nav {
+    text-align: center;
+    padding: 10px 0;
+    background: white;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+}
+
+.sub-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.sub-nav ul li {
+    display: inline-block;
+}
+
+.sub-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+
+.sub-nav ul li a:hover, .sub-nav ul li a.active {
+    color: #EE7535;
+    border-bottom: 2px solid #EE7535; /* 마우스 오버시 밑줄 */
+}
+
+/* 메인 컨텐츠 스타일 */
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border: 1px solid #ddd;
+}
+
+/* 슬라이더 스타일 */
+.slider-section {
+    position: relative;
+    margin: 30px 0;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.slider-item {
+    min-width: 300px;
+    margin: 0 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.slider-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slider-caption {
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+.slider-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 1;
+}
+
+.slider-btn {
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.slider-btn:hover {
+    color: #EE7535;
+}
+
+.post-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* 캘린더 스타일 */
+.calendar-section {
+    margin-top: 50px;
+}
+
+.section-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: left;
-    color: #1c1c1c;
-  }
+    display: flex;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: #EE7535;
+}
+
+.calendar-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #EE7535;
+    color: white;
+}
+
+.calendar-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.calendar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.calendar-nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #eee;
+}
+
+.weekdays div {
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #eee;
+}
+
+.day {
+    min-height: 80px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-number {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.event {
+    font-size: 11px;
+    padding: 2px 4px;
+    margin: 1px 0;
+    border-radius: 3px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.event-study {
+    background-color: #e3f2fd;
+    color: #0277bd;
+}
+
+.event-meeting {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.event-workshop {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.event-hackathon {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.other-month {
+    background-color: #f9f9f9;
+    color: #ccc;
+}
+
+/* 푸터 스타일 */
+footer {
+    background: #fff;
+    border-top: 2px solid #ddd;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* 로고와 텍스트를 가로 정렬 */
+.logo-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 로고와 텍스트 사이 간격 */
+}
+
+.footer-logo {
+    width: 150px; /* 로고 크기 */
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 3px 0;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #EE7535;
+}
+
+.highlight-text {
+    font-weight: bold;
+    color: #EE7535; /* 강조 색상 */    
+}
+
+/* About 페이지 스타일 */
+.content-container {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-list, .program-list, .mentor-list {
+    list-style: none;
+}
+
+.about-list li, .program-list li, .mentor-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.image-wrapper {
+    margin-top: 20px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.program-title {
+    margin-bottom: 20px;
+}
+
+.left-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* 추가 스타일 */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    flex-wrap: nowrap;
+    margin-top: 150px !important;
+    margin-bottom: 80px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+.stats-left {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
   
-  /* 슬라이드형 멘토 카드 */
-  .notice-slider {
+.stats-left p {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    margin: 15px 0;
+}
+
+.stats-left span {
+    font-size: 40px; 
+    font-weight: bold;
+    display: inline-block;
+    min-width: 70px; 
+    text-align: right; 
+}
+
+.stats-right {
+    flex-grow: 0; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto; 
+}
+
+.stats-right img {
+    width: 300px !important; 
+    max-width: none !important; 
+    height: auto; 
+    display: block;
+}
+
+.about-container {
+    position: relative;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 250px;
+}
+
+.image-container {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+}
+
+.about-text {
+    flex-grow: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 2;
+    text-align: justify;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.projects-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.projects-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 50px;
+}
+
+/* 프로젝트 스타일 */
+.project-list {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    gap: 50px;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 40px;
-  }
-  
-  .notice-slider .card {
-    width: 220px;
-    background: linear-gradient(to bottom right, #FFD9A0, #fff);
-    border-radius: 20px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    padding: 20px;
+}
+
+.project {
+    flex-grow: 1;
     text-align: center;
-    font-size: 14px;
-    transition: transform 0.2s;
-  }
-  
-  .notice-slider .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .notice-slider .card img {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
+    width: 300px;
+}
+
+.project img {
+    width: 280px;
+    height: 220px;
     object-fit: cover;
-  }
-  
-  /* 두 번째 카드 배경색 다르게 */
-  .notice-slider .card:nth-child(2) {
-    background: linear-gradient(to bottom right, #D7B8FF, #fff);
-  }
-  
-  /* -------------------------------
-     FullCalendar 스타일 수정용
-  -------------------------------- */
-  #calendar {
-    max-width: 100%;
-    margin: 30px auto;
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 14px;
-  }
-  
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+.project p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.recruit-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.recruit-container p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #E0E0E0;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.apply-button:hover {
+    background-color: #C0C0C0;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .slider-item {
+        min-width: 250px;
+    }
+
+    .days {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .day {
+        min-height: 60px;
+        padding: 2px;
+    }
+
+    .event {
+        font-size: 9px;
+        padding: 1px 2px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .text-content, .image-content, .left-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+    }
+    
+    .project-list {
+        gap: 20px;
+    }
+}
