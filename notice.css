@@ -1,0 +1,68 @@
+/* -------------------------------
+   공지사항 카드 슬라이드 스타일
+-------------------------------- */
+.notice-section {
+    background-color: #fffaf5;
+    padding: 60px 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #1c1c1c;
+  }
+  
+  /* 슬라이드형 멘토 카드 */
+  .notice-slider {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  .notice-slider .card {
+    width: 220px;
+    background: linear-gradient(to bottom right, #FFD9A0, #fff);
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    transition: transform 0.2s;
+  }
+  
+  .notice-slider .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .notice-slider .card img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    object-fit: cover;
+  }
+  
+  /* 두 번째 카드 배경색 다르게 */
+  .notice-slider .card:nth-child(2) {
+    background: linear-gradient(to bottom right, #D7B8FF, #fff);
+  }
+  
+  /* -------------------------------
+     FullCalendar 스타일 수정용
+  -------------------------------- */
+  #calendar {
+    max-width: 100%;
+    margin: 30px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+  }
+  
