@@ -19,7 +19,6 @@ body {
     min-height: 100vh;
 }
 
-
 .header-container {
     display: flex;
     align-items: center;
@@ -224,37 +223,43 @@ footer {
 }
 
 .divider {
-    border-top: 2px solid #ddd;
+    border-top: 2px solid #000000;
     margin: 30px 0;
 }
 
 .events {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .event-card {
     background-color: white;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 250px;
     text-align: center;
+    border: 1px solid #ddd;
+    margin: 5px auto;
 }
 
 .event-card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 25px;
 }
 
 .event, .events-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 200px;
-    margin: 0 auto;
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 110px 200px;
+    justify-items: center; 
+    margin-top: 5px;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .tbd {
