@@ -190,15 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let events = '';
             
             // 예시 이벤트 - 실제 구현에서는 서버에서 데이터를 가져와야 함
-            if (i % 5 === 0) {
-                events += `<div class="event event-study">스터디</div>`;
-            }
-            if (i % 7 === 0) {
-                events += `<div class="event event-meeting">미팅</div>`;
-            }
-            if (i % 10 === 0) {
-                events += `<div class="event event-workshop">워크샵</div>`;
-            }
+            
             
             dayHTML += `
                 <div class="day">
