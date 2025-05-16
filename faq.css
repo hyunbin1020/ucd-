@@ -15,14 +15,6 @@ body {
 }
 
 /* 헤더 스타일 */
-header {
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
 .header-container {
     display: flex;
     align-items: center;
@@ -30,7 +22,7 @@ header {
     width: 100%;
     padding: 10px 40px;
     background: white;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 2px solid #ddd;
 }
 
 .logo-container {
@@ -41,11 +33,6 @@ header {
 
 .logo-container img {
     height: 70px;
-    transition: transform 0.3s ease;
-}
-
-.logo-container img:hover {
-    transform: scale(1.05);
 }
 
 .top-nav {
@@ -71,35 +58,19 @@ header {
     font-weight: bold;
     font-size: 15px;
     padding: 5px 10px;
-    transition: all 0.3s;
-    position: relative;
-}
-
-.top-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #EE7535;
-    transition: width 0.3s;
+    transition: color 0.3s;
 }
 
 .top-nav ul li a:hover {
-    color: #EE7535;
-}
-
-.top-nav ul li a:hover::after {
-    width: 100%;
+    color: #ff9900;
+    border-bottom: 2px solid #ff9900;
 }
 
 .sub-nav {
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     background: white;
-    border-bottom: 1px solid #f0f0f0;
-    position: relative;
+    border-bottom: 2px solid #ddd;
 }
 
 .sub-nav ul {
@@ -120,27 +91,12 @@ header {
     font-weight: bold;
     font-size: 16px;
     padding: 8px 12px;
-    transition: all 0.3s;
-    position: relative;
-}
-
-.sub-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #EE7535;
-    transition: width 0.3s;
+    transition: color 0.3s;
 }
 
 .sub-nav ul li a:hover, .sub-nav ul li a.active {
-    color: #EE7535;
-}
-
-.sub-nav ul li a:hover::after, .sub-nav ul li a.active::after {
-    width: 100%;
+    color: #ff9900;
+    border-bottom: 2px solid #ff9900;
 }
 
 /* 배너 스타일 */
@@ -434,20 +390,20 @@ header {
 /* 푸터 스타일 */
 footer {
     background: #fff;
-    border-top: 1px solid #eee;
-    padding: 40px 0;
+    border-top: 2px solid #ddd;
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
-/* 로고와 텍스트를 가로 정렬 */
 .logo-info {
     display: flex;
     align-items: center;
@@ -461,7 +417,7 @@ footer {
 .footer-info p {
     font-size: 14px;
     color: #555;
-    margin: 4px 0;
+    margin: 3px 0;
 }
 
 .footer-left {
@@ -479,19 +435,19 @@ footer {
 }
 
 .social-icons {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .social-icons a {
     display: inline-block;
+    margin-left: 10px;
     color: #555;
-    font-size: 22px;
-    margin-left: 15px;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
 .social-icons a:hover {
-    color: #EE7535;
+    color: #ff9900;
 }
 
 /* 반응형 스타일 */

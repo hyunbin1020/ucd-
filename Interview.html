@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인 인터뷰</title>
     <link rel="stylesheet" href="Interview.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="custom.css">
     <style>
         .intro h2 {
             font-size: 63px;
@@ -107,6 +107,17 @@
             color: #EE7535;
             font-weight: bold;
         }
+        
+        /* 인터뷰 블록 호버 효과 */
+        .info-block {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .info-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 
@@ -131,7 +142,7 @@
             <ul>
                 <li><a href="notice.html">공지사항</a></li>
                 <li><a href="gallery.html">멋사 활동 갤러리</a></li>
-                <li><a href="Interview.html">인터뷰/우수 프로젝트</a></li>
+                <li><a href="Interview.html" class="active">인터뷰/우수 프로젝트</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
@@ -144,11 +155,13 @@
                 <details>
                     <summary><i class="fas fa-chevron-right"></i> 멋사 멤버 인터뷰</summary>
                     <ul>
-                        <li><a href="#">우수회원 / 채진우</a></li>
-                        <li><a href="#">개근회원 / 최현빈</a></li>
-                        <li><a href="#">노력회원 / 백지원</a></li>
-                        <li><a href="#">Non-STEM / 한나경  </a></li>
-                        <li><a href="#">임원 / 김민형</a></li>
+
+                        <li><a href="jinwoo.html">우수회원 / 채진우</a></li>
+                        <li><a href="hyunbin.html">개근회원 / 최현빈</a></li>
+                        <li><a href="jiwon.html">노력회원 / 백지원</a></li>
+                        <li><a href="nakyung.html">Non-STEM / 한나경</a></li>
+                        <li><a href="minhyung.html">임원 / 김민형</a></li>
+
                     </ul>
                 </details>
             </details>
@@ -160,20 +173,19 @@
                 <details>
                     <summary><i class="fas fa-chevron-right"></i> 아이디어톤</summary>
                     <ul>
-                        <li><a href="#">데일리 가든</a></li>
-                        <li><a href="#">Eegloo</a></li>
-                        <li><a href="#">스캠싫소</a></li>
+                        <li><a href="dailygarden.html">데일리 가든</a></li>
+                        <li><a href="eegloo.html">Eegloo</a></li>
+                        <li><a href="scam.html">스캠싫소</a></li>
                     </ul>
                 </details>
             </details>
             
                   
-                  <!-- 해커톤 as an expandable (or clickable) item -->
-                  <details>
-                    <summary><i class="fas fa-chevron-right"></i> 해커톤</summary>
-                    <!-- If you plan to add nested items later, include them in a list here -->
-                    <!-- For now, it can function just as an expandable header -->
-                  </details>
+            <!-- 해커톤 as an expandable (or clickable) item -->
+            <details>
+                <summary><i class="fas fa-chevron-right"></i> 해커톤</summary>
+                <!-- If you plan to add nested items later, include them in a list here -->
+                <!-- For now, it can function just as an expandable header -->
             </details>
         </div>
 
@@ -192,16 +204,16 @@
             </div>
             <!-- Other main content -->
             <div class="info-blocks">
-                <div class="info-block">
+                <div class="info-block" onclick="location.href='minhyung.html';">
                   <div class="info-text">
                     <h2>임원 / 김민형</h2>
-                    <p>“전문 분야라고 하기에는 부족했던 코딩, 멋쟁이사자처럼 덕분에 이제는 단순한 학습을 넘어 사용자들이 필요로 하는 서비스를 기획/개발해 보고 싶어요!”</p>
+                    <p>"전문 분야라고 하기에는 부족했던 코딩, 멋쟁이사자처럼 덕분에 이제는 단순한 학습을 넘어 사용자들이 필요로 하는 서비스를 기획/개발해 보고 싶어요!"</p>
                   </div>
                   <div class="info-image">
                     <img src="images/minhyung.jpg" alt="Info 1">
                   </div>
                 </div>
-                <div class="info-block">
+                <div class="info-block" onclick="location.href='jinwoo.html';">
                   <div class="info-text">
                     <h2>우수 회원 / 채진우</h2>
                     <p>"코딩이 낯설었던 내가, 이제는 데이터 분석과 웹 개발을 꿈꿉니다"</p>
@@ -210,7 +222,7 @@
                     <img src="images/jinwoo.jpg" alt="Info 2">
                   </div>
                 </div>
-                <div class="info-block">
+                <div class="info-block" onclick="location.href='hyunbin.html';">
                   <div class="info-text">
                     <h2>개근 회원 / 최현빈</h2>
                     <p>"멋쟁이사자처럼에서 함께 성장하며 코딩에 대한 자신감을 얻었어요!"</p>
@@ -219,7 +231,7 @@
                     <img src="images/hyunbin.png" alt="Info 3">
                   </div>
                 </div>
-                <div class="info-block">
+                <div class="info-block" onclick="location.href='jiwon.html';">
                   <div class="info-text">
                     <h2>노력 회원 / 백지원</h2>
                     <p>"멋사에서 협업과 실전 경험을 통해 개발 역량을 확장하고 새로운 도전에 대한 자신감을 얻었어요!"</p>
@@ -228,7 +240,7 @@
                     <img src="images/jiwon.jpg" alt="Info 4">
                   </div>
                 </div>
-                <div class="info-block">
+                <div class="info-block" onclick="location.href='nakyung.html';">
                   <div class="info-text">
                     <h2>Non-Stem major / 한나경</h2>
                     <p>"코딩을 이용해서 사용자의 행동과 니즈를 반영한 실용적인 디자인을 연구하고 싶어요"</p>
@@ -239,10 +251,6 @@
                 </div>
               </div>
         </div>
-
-    </div>
-
-
     </div>
 
 <footer>
@@ -261,20 +269,20 @@
         <div class="footer-right">
             <p>Copyright © 2025 LIKELIONS UCD</p>
             <p>All rights reserved</p>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/likelion_ucd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/likelion.net" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://x.com/LIKELION_KR" target="_blank">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/UCYaDkwVaOhuoe_LuFr3lWkA" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </div>
+             <div class="social-icons">
+  <a href="https://www.instagram.com/likelion_ucd" target="_blank">
+    <img src="images/인스타로고.png" alt="Instagram" width="24" height="24">
+  </a>
+  <a href="https://www.facebook.com/likelion.net" target="_blank">
+    <img src="images/페이스북.png" alt="Facebook" width="24" height="24">
+  </a>
+  <a href="https://x.com/LIKELION_KR" target="_blank">
+    <img src="images/엑스.png" alt="Twitter" width="24" height="24">
+  </a>
+  <a href="https://www.youtube.com/channel/UCYaDkwVaOhuoe_LuFr3lWkA" target="_blank">
+    <img src="images/유튜브.png" alt="YouTube" width="24" height="24">
+  </a>
+</div>
         </div>
     </div>
 </footer>
@@ -289,3 +297,7 @@
                 }
             });
         });
+    </script>
+</body>
+
+</html>
