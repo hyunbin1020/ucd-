@@ -179,7 +179,7 @@ body {
     position: -webkit-sticky; /* For Safari support */
     position: sticky;
     top: 260px;               /* Sticks vertically at this offset */
-    width: 220px;
+    width: 250px;
     background-color: white;
     padding: 20px 15px 20px 20px;
     border-right: 2px solid #ddd;
