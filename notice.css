@@ -13,7 +13,6 @@ body {
     min-height: 100vh;
 }
 
-/* 헤더 스타일 */
 .header-container {
     display: flex;
     align-items: center;
@@ -62,7 +61,7 @@ body {
 
 .top-nav ul li a:hover {
     color: #EE7535;
-    border-bottom: 2px solid #EE7535; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #EE7535; 
 }
 
 .sub-nav {
@@ -96,10 +95,10 @@ body {
 
 .sub-nav ul li a:hover, .sub-nav ul li a.active {
     color: #EE7535;
-    border-bottom: 2px solid #EE7535; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #EE7535;
 }
 
-/* 메인 컨텐츠 스타일 */
+
 .main-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -109,7 +108,7 @@ body {
     border: 1px solid #ddd;
 }
 
-/* 슬라이더 스타일 */
+
 .slider-section {
     position: relative;
     margin: 30px 0;
@@ -176,7 +175,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* 캘린더 스타일 */
+
 .calendar-section {
     margin-top: 50px;
 }
@@ -300,7 +299,7 @@ body {
     color: #ccc;
 }
 
-/* 푸터 스타일 */
+
 footer {
     background: #fff;
     border-top: 2px solid #ddd;
@@ -317,15 +316,15 @@ footer {
     padding: 10px 20px;
 }
 
-/* 로고와 텍스트를 가로 정렬 */
+
 .logo-info {
     display: flex;
     align-items: center;
-    gap: 20px; /* 로고와 텍스트 사이 간격 */
+    gap: 20px;
 }
 
 .footer-logo {
-    width: 150px; /* 로고 크기 */
+    width: 150px;
 }
 
 .footer-info p {
@@ -370,10 +369,10 @@ footer {
 
 .highlight-text {
     font-weight: bold;
-    color: #EE7535; /* 강조 색상 */    
+    color: #EE7535;     
 }
 
-/* About 페이지 스타일 */
+
 .content-container {
     display: flex;
     align-items: center;
@@ -433,7 +432,7 @@ footer {
     margin-right: 20px;
 }
 
-/* 추가 스타일 */
+
 .stats-container {
     display: flex;
     justify-content: space-between;
@@ -540,7 +539,7 @@ footer {
     padding-top: 50px;
 }
 
-/* 프로젝트 스타일 */
+
 .project-list {
     display: flex;
     justify-content: center;
@@ -602,7 +601,7 @@ footer {
     background-color: #C0C0C0;
 }
 
-/* 반응형 스타일 */
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;

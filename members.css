@@ -69,7 +69,7 @@ body {
 
 .top-nav ul li a:hover {
     color: #ff9900;
-    border-bottom: 2px solid #ff9900; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #ff9900; 
 }
 
 .sub-nav {
@@ -102,7 +102,7 @@ body {
 
 .sub-nav ul li a:hover {
     color: #ff9900;
-    border-bottom: 2px solid #ff9900; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #ff9900;
 }
 
 .nav-bar {
@@ -175,65 +175,6 @@ h2 {
     margin-bottom: 50px; 
 }
 
-/* footer {
-    background-color: #ddd;
-    padding: 10px;
-    margin-top: 20px;
-} */
-
-/* footer {
-    background: #fff;
-    border-top: 2px solid #ddd;
-    padding: 20px 0;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-
-.footer-left {
-    text-align: left;
-}
-
-.footer-left p {
-    font-size: 14px;
-    color: #555;
-    margin: 5px 0;
-}
-
-.footer-logo {
-    width: 150px;
-    margin-bottom: 10px;
-}
-
-.footer-right {
-    text-align: right;
-}
-
-.footer-right p {
-    font-size: 14px;
-    color: #555;
-    margin: 5px 0;
-}
-
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
-} */
 
 footer {
     background: #fff;
@@ -250,15 +191,15 @@ footer {
     padding: 10px 20px;
 }
 
-/* 🔹 로고와 텍스트를 가로 정렬 */
+
 .logo-info {
     display: flex;
     align-items: center;
-    gap: 20px; /* 로고와 텍스트 사이 간격 */
+    gap: 20px; 
 }
 
 .footer-logo {
-    width: 150px; /* 로고 크기 */
+    width: 150px; 
 }
 
 .footer-info p {
