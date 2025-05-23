@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/* 헤더 스타일 */
+
 header {
     background-color: white;
 }
@@ -66,7 +66,7 @@ header {
 
 .top-nav ul li a:hover {
     color: #EE7535;
-    border-bottom: 2px solid #EE7535; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #EE7535; 
 }
 
 .sub-nav {
@@ -100,10 +100,10 @@ header {
 
 .sub-nav ul li a:hover {
     color: #EE7535;
-    border-bottom: 2px solid #EE7535; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #EE7535; 
 }
 
-/* 갤러리 컨테이너 스타일 */
+
 .gallery-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -114,7 +114,7 @@ header {
     border: 1px solid #ddd;
 }
 
-/* 갤러리 그리드 레이아웃 */
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -122,7 +122,7 @@ header {
     margin-top: 30px;
 }
 
-/* 갤러리 아이템 스타일 */
+
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -138,7 +138,7 @@ header {
 
 .gallery-item img {
     width: 100%;
-    height: 250px; /* 고정 높이 */
+    height: 250px; 
     object-fit: cover;
     display: block;
 }
@@ -153,13 +153,12 @@ header {
     border-top: 1px solid #eee;
 }
 
-/* 하이라이트 텍스트 스타일 */
 .highlight-text {
     font-weight: bold;
     color: #EE7535;
 }
 
-/* 푸터 스타일 */
+
 footer {
     background: #fff;
     border-top: 2px solid #ddd;
@@ -176,7 +175,7 @@ footer {
     padding: 10px 20px;
 }
 
-/* 로고와 텍스트를 가로 정렬 */
+
 .logo-info {
     display: flex;
     align-items: center;
@@ -221,7 +220,7 @@ footer {
     height: 24px;
 }
 
-/* 페이지 타이틀 스타일 */
+
 .page-title {
     font-size: 28px;
     font-weight: bold;
@@ -242,7 +241,7 @@ footer {
     transform: translateX(-50%);
 }
 
-/* 반응형 디자인 */
+
 @media (max-width: 768px) {
     .gallery-grid {
         grid-template-columns: 1fr;

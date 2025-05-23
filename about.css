@@ -69,7 +69,7 @@ body {
 
 .top-nav ul li a:hover {
     color: #ff9900;
-    border-bottom: 2px solid #ff9900; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #ff9900; 
 }
 
 .sub-nav {
@@ -102,7 +102,7 @@ body {
 
 .sub-nav ul li a:hover {
     color: #ff9900;
-    border-bottom: 2px solid #ff9900; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #ff9900; 
 }
 
 .nav-bar {
@@ -151,23 +151,21 @@ body {
     font-weight: bold;
 }
 
-/* 🔹 콘텐츠 배치 (이미지 + 텍스트) */
 .content-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;  /* 이미지와 텍스트 사이 간격 */
+    gap: 40px;  
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
 }
 
-/* 🔹 반대로 배치할 경우를 위한 클래스 */
+
 .reverse {
     flex-direction: row-reverse;
 }
 
-/* 🔹 텍스트 스타일 */
 .text-content {
     flex: 1;
     text-align: left;
@@ -185,7 +183,6 @@ body {
     color: #333;
 }
 
-/* 🔹 이미지 크기 조정 */
 .image-content {
     flex: 1;
     text-align: center;
@@ -193,12 +190,11 @@ body {
 
 .image-content img {
     width: 100%;
-    max-width: 400px; /* 적절한 크기로 조정 */
+    max-width: 400px; 
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 🔹 반응형 디자인 */
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column;
@@ -214,23 +210,22 @@ body {
     }
 }
 
-/* 🔹 강조 색상 */
 .highlight {
     color: #EE7535;
     font-weight: bold;
 }
-/* 🔹 "멋쟁이 사자처럼" 섹션 스타일 추가 */
+
 .about-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;  /* 이미지와 텍스트 사이 간격 */
+    gap: 40px;  
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
 }
 
-/* 🔹 텍스트 스타일 */
+
 .about-text {
     flex: 1;
     text-align: left;
@@ -253,7 +248,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* 🔹 이미지 스타일 */
 .about-image {
     flex: 1;
     text-align: center;
@@ -266,7 +260,7 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 🔹 반응형 디자인 */
+
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
@@ -293,15 +287,15 @@ footer {
     padding: 10px 20px;
 }
 
-/* 🔹 로고와 텍스트를 가로 정렬 */
+
 .logo-info {
     display: flex;
     align-items: center;
-    gap: 20px; /* 로고와 텍스트 사이 간격 */
+    gap: 20px;
 }
 
 .footer-logo {
-    width: 150px; /* 로고 크기 */
+    width: 150px;
 }
 
 .footer-info p {
@@ -337,28 +331,27 @@ footer {
     width: 24px;
     height: 24px;
 }
-/* 🔹 "핵심 프로그램" 섹션 정렬 조정 */
+
 .content-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* 좌우 균형 맞춤 */
-    gap: 60px; /* 이미지와 텍스트 간격 더 벌려서 균형 유지 */
+    justify-content: space-between; 
+    gap: 60px;
     max-width: 1100px;
     margin: 40px auto;
     padding: 20px;
 }
 
-/* 🔹 제목과 이미지를 하나의 그룹으로 정렬 */
 .left-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 중앙 정렬 */
-    justify-content: center; /* 세로 정렬 */
+    align-items: center;
+    justify-content: center; 
     text-align: center;
 }
 
-/* 🔹 제목을 중앙 정렬 */
+
 .program-title {
     font-size: 24px;
     font-weight: bold;
@@ -366,34 +359,34 @@ footer {
     text-align: center;
 }
 
-/* 🔹 이미지 크기 조정 및 정렬 */
+
 .image-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 10px; /* 제목과 이미지 간격 추가 */
+    margin-top: 10px; 
 }
 
 .image-wrapper img {
-    max-width: 350px; /* 이미지 크기 조정 */
+    max-width: 350px; 
     border-radius: 10px;
 }
 
-/* 🔹 텍스트 정렬 및 위치 조정 */
+
 .text-content {
     flex: 1;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 20px; /* 텍스트 왼쪽 여백 추가 */
+    padding-left: 20px; 
 }
 
-/* 🔹 리스트 정렬 */
+
 .program-list {
     list-style: none;
     padding: 0;
-    margin-left: 0; /* 리스트가 너무 안쪽으로 들어가는 문제 해결 */
+    margin-left: 0;
 }
 
 .program-list li {
@@ -402,7 +395,7 @@ footer {
     margin-bottom: 10px;
 }
 
-/* 🔹 반응형 (모바일에서 세로 정렬) */
+
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column;
