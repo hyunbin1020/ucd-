@@ -139,7 +139,9 @@
           
             <textarea placeholder="문의 내용을 입력해주세요." class="form-textarea" required></textarea>
           
-            <button class="submit-btn"><i class="fas fa-paper-plane"></i> 문의하기</button>
+            <button class="submit-btn" onclick="sendMail()">
+                <i class="fas fa-paper-plane"></i> 문의하기
+              </button>
         </div>
     </div>
 </section>
@@ -237,9 +239,7 @@
     });
 </script>
 
-<button class="submit-btn" onclick="sendMail()">
-  <i class="fas fa-paper-plane"></i> 문의하기
-</button>
+
 
 <script>
 function sendMail() {
