@@ -14,7 +14,7 @@ body {
     color: #333;
 }
 
-/* 헤더 스타일 */
+
 .header-container {
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ body {
     border-bottom: 2px solid #ff9900;
 }
 
-/* 배너 스타일 */
+
 .page-banner {
     background: linear-gradient(135deg, #EE7535, #FFC107);
     color: white;
@@ -143,14 +143,14 @@ body {
     margin: 0 auto;
 }
 
-/* FAQ 컨테이너 스타일 */
+
 .faq-container {
     max-width: 900px;
     margin: 0 auto 80px;
     padding: 0 20px;
 }
 
-/* 검색 스타일 */
+
 .faq-search {
     display: flex;
     margin-bottom: 30px;
@@ -186,7 +186,7 @@ body {
     background: #d65b1e;
 }
 
-/* 카테고리 스타일 */
+
 .faq-categories {
     display: flex;
     justify-content: center;
@@ -216,7 +216,7 @@ body {
     border-color: #EE7535;
 }
 
-/* FAQ 아이템 스타일 */
+
 .faq-list {
     text-align: left;
 }
@@ -290,7 +290,7 @@ body {
     text-decoration: underline;
 }
 
-/* 문의 폼 스타일 */
+
 .inquiry-form {
     margin-top: 80px;
     background: white;
@@ -387,7 +387,7 @@ body {
     transform: translateY(0);
 }
 
-/* 푸터 스타일 */
+
 footer {
     background: #fff;
     border-top: 2px solid #ddd;
@@ -450,7 +450,7 @@ footer {
     color: #ff9900;
 }
 
-/* 반응형 스타일 */
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -502,7 +502,7 @@ footer {
     }
 }
 
-/* 애니메이션 효과 */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
