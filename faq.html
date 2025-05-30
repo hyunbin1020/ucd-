@@ -18,7 +18,7 @@
         </div>
         <nav class="top-nav">
             <ul>
-                <li><a href="멋쟁이사자.html">홈</a></li>
+                <li><a href="index.html">홈</a></li>
                 <li><a href="about.html">About LIKE LION</a></li>
                 <li><a href="events.html">이벤트</a></li>
                 <li><a href="members.html">멤버</a></li>
@@ -117,7 +117,7 @@
         </div>
     </div>
 
-    <!-- 추가 문의 폼 -->
+    
     <div class="inquiry-form">
         <div class="form-header">
             <i class="fas fa-envelope-open-text"></i>
@@ -180,13 +180,13 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // FAQ 아이템 토글 기능
+        
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             item.querySelector('.faq-question').addEventListener('click', () => {
                 item.classList.toggle('active');
                 
-                // 아이콘 회전
+                
                 const icon = item.querySelector('.faq-icon i');
                 if (item.classList.contains('active')) {
                     icon.classList.remove('fa-chevron-down');
@@ -198,11 +198,11 @@
             });
         });
 
-        // 카테고리 필터링
+
         const categoryBtns = document.querySelectorAll('.category-btn');
         categoryBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // 활성화된 버튼 스타일 변경
+                
                 categoryBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
@@ -218,7 +218,7 @@
             });
         });
 
-        // 검색 기능
+        
         const searchInput = document.getElementById('faq-search-input');
         searchInput.addEventListener('input', () => {
             const searchTerm = searchInput.value.toLowerCase();
@@ -235,6 +235,23 @@
             });
         });
     });
+</script>
+
+<button class="submit-btn" onclick="sendMail()">
+  <i class="fas fa-paper-plane"></i> 문의하기
+</button>
+
+<script>
+function sendMail() {
+  const email = document.querySelector('input[type=email]').value;
+  const type = document.querySelector('select').value;
+  const message = document.querySelector('textarea').value;
+
+  const subject = encodeURIComponent(`[문의] ${type}`);
+  const body = encodeURIComponent(`보낸사람: ${email}\n\n문의내용:\n${message}`);
+
+  window.location.href = `mailto:ucd@likelion.org?subject=${subject}&body=${body}`;
+}
 </script>
 
 </body>

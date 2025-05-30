@@ -151,6 +151,7 @@ body {
     font-weight: bold;
 }
 
+
 .content-container {
     display: flex;
     align-items: center;
@@ -296,6 +297,7 @@ footer {
 
 .footer-logo {
     width: 150px;
+
 }
 
 .footer-info p {
@@ -341,6 +343,7 @@ footer {
     margin: 40px auto;
     padding: 20px;
 }
+
 
 .left-content {
     flex: 1;
