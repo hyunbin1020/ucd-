@@ -69,7 +69,7 @@ body {
 
 .top-nav ul li a:hover {
     color: #ff9900;
-    border-bottom: 2px solid #ff9900; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #ff9900; 
 }
 
 .sub-nav {
@@ -102,7 +102,7 @@ body {
 
 .sub-nav ul li a:hover {
     color: #ff9900;
-    border-bottom: 2px solid #ff9900; /* 마우스 오버시 밑줄 */
+    border-bottom: 2px solid #ff9900; 
 }
 
 .nav-bar {
@@ -153,16 +153,22 @@ body {
     width: 100%;
     max-width: none;
     flex-wrap: nowrap;
-    margin-top: 150px !important; /* 간격 더 증가 */
-    margin-bottom: 80px !important; /* 아래쪽 간격 증가 */
-    padding-top: 40px !important; /* 내부 여백 증가 */
+    margin-top: 150px !important;
+    margin-bottom: 80px !important; 
+    padding-top: 40px !important;
     padding-bottom: 40px !important;
 }
-
+.stats-left {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
 .stats-left p {
     display: flex;
     align-items: center; 
     gap: 8px; 
+    margin: 15px 0;
 }
 
 .stats-left span {
@@ -183,45 +189,51 @@ body {
 }
 
 .stats-right img {
-    width: 145px; /* 140px보다 크지만 150px보다 작게 설정 */
-    height: auto;
-    max-width: 100%;
-    margin-right:-10px;
+    width: 300px !important; 
+    max-width: none !important; 
+    height: auto; 
+    display: block;
 
-    .about-container {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 40px;
-        padding: 80px 20px !important; /* 위아래 간격 늘림 */
-        max-width: 1000px;
-        margin: 0 auto;
-        margin-bottom: 60px !important; /* 간격 추가 */
+    
 }
+.about-container {
+    position: relative;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 250px; 
 }
-.about-container img {
-    width: 140px; 
-    flex-shrink: 0; 
+
+.image-container {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
 }
 
 .about-text {
     flex-grow: 1;
     max-width: 600px;
-    text-align: left; /* ✅ 전체를 왼쪽 정렬 */
+    text-align: left; 
 }
 
 .about-text p {
     font-size: 18px;
-    line-height: 2; /* ✅ 줄 간격을 넓혀 가독성 향상 */
-    text-align: justify; /* ✅ 좌우 균등 정렬 */
-    max-width: 500px; /* ✅ 문장 길이를 제한 */
-    margin-top: 10px; /* ✅ 위쪽 간격 추가 */
+    line-height: 2; 
+    text-align: justify; 
+    max-width: 500px;
+    margin-top: 10px; 
 }
 
 .about-text h2 {
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 13px; /* ✅ 제목과 본문 사이 간격 추가 */
+    margin-bottom: 13px; 
 }
 
 
@@ -240,43 +252,43 @@ body {
     margin-bottom: 30px;
 }
 .intro {
-    text-align: center;  /* 가운데 정렬 */
-    margin-top: 100px;   /* 상단 여백 추가 */
-    padding-top: 50px;   /* 내부 여백 추가 */
+    text-align: center;  
+    margin-top: 100px;   
+    padding-top: 50px;  
 }
 
 
-/* 프로젝트 리스트 */
+
 .project-list {
     display: flex;
     justify-content: center;
-    gap: 50px; /* 이미지 간격 동일하게 조정 */
+    gap: 50px; 
     align-items: center;
-    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
+    flex-wrap: wrap;
 }
 
-/* 프로젝트 개별 박스 */
+
 .project {
-    flex-grow: 1; /* 크기 자동 조정 */
+    flex-grow: 1; 
     text-align: center;
-    width: 300px; /* 모든 프로젝트 크기 동일하게 */
+    width: 300px; 
 }
 
-/* 프로젝트 이미지 스타일 */
+
 .project img {
-    width: 280px; /* 이미지 크기 동일하게 */
-    height: 220px; /* 비율 유지하면서 동일 크기 */
-    object-fit: cover; /* 이미지 비율 유지하면서 박스에 맞게 조정 */
-    border-radius: 15px; /* 둥근 모서리 유지 */
-    transition: transform 0.3s ease-in-out; /* 마우스 올릴 때 애니메이션 */
+    width: 280px; 
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 15px; 
+    transition: transform 0.3s ease-in-out;
 }
 
-/* 마우스 올릴 때 확대 효과 */
+
 .project img:hover {
     transform: scale(1.05);
 }
 
-/* 프로젝트 설명 */
+
 .project p {
     font-size: 16px;
     font-weight: bold;
@@ -287,13 +299,13 @@ body {
 .sub-nav {
     text-align: center;
     padding: 10px 0;
-    background: white; /* 기본 배경 */
+    background: white; 
     border-bottom: 2px solid #ddd;
     position: relative;
 }
 .recruit-container {
     text-align: center;
-    margin-top: 50px; /* 위쪽 여백 */
+    margin-top: 50px; 
 }
 
 .recruit-container p {
@@ -321,7 +333,7 @@ body {
 }
 .highlight-text {
     font-weight: bold;
-    color: #EE7535; /* 강조 색상 */    
+    color: #EE7535;    
 }
 
 footer {
@@ -339,15 +351,15 @@ footer {
     padding: 10px 20px;
 }
 
-/* 🔹 로고와 텍스트를 가로 정렬 */
+
 .logo-info {
     display: flex;
     align-items: center;
-    gap: 20px; /* 로고와 텍스트 사이 간격 */
+    gap: 20px; 
 }
 
 .footer-logo {
-    width: 150px; /* 로고 크기 */
+    width: 150px; 
 }
 
 .footer-info p {
@@ -382,4 +394,9 @@ footer {
 .social-icons img {
     width: 24px;
     height: 24px;
+}
+.social-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }

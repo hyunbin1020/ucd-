@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
@@ -22,18 +20,15 @@ body {
     border-bottom: 2px solid #ddd;
 }
 
-
 .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-
 .logo-container img {
     height: 70px;
 }
-
 
 .top-nav {
     display: flex;
@@ -42,18 +37,15 @@ body {
     background: white;
 }
 
-
 .top-nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
 }
 
-
 .top-nav ul li {
     display: inline-block;
 }
-
 
 .top-nav ul li a {
     text-decoration: none;
@@ -64,13 +56,10 @@ body {
     transition: color 0.3s;
 }
 
-
 .top-nav ul li a:hover {
     color: #ff9900;
+    border-bottom: 2px solid #ff9900;
 }
-
-
-
 
 .sub-nav {
     text-align: center;
@@ -78,7 +67,6 @@ body {
     background: white;
     border-bottom: 2px solid #ddd;
 }
-
 
 .sub-nav ul {
     list-style: none;
@@ -88,11 +76,9 @@ body {
     align-items: center;
 }
 
-
 .sub-nav ul li {
     display: inline-block;
 }
-
 
 .sub-nav ul li a {
     text-decoration: none;
@@ -103,234 +89,58 @@ body {
     transition: color 0.3s;
 }
 
-
-.sub-nav ul li a:hover {
+.sub-nav ul li a:hover, .sub-nav ul li a.active {
     color: #ff9900;
-}
-
-
-.nav-bar {
-    text-align: center;
-    padding: 10px 0;
-}
-
-
-.nav-bar ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    align-items: center;
-}
-
-
-.nav-bar ul li {
-    display: inline-block;
-    position: relative;
-}
-
-
-.nav-bar ul li:not(:last-child)::after {
-    content: "|";
-    position: absolute;
-    right: -6px;
-    color: black;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-.nav-bar ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 0 6px;
-    white-space: nowrap;
-    transition: color 0.3s;
-}
-
-
-.nav-bar ul li a:hover {
-    color: #ff9900;
-}
-
-
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    border-bottom: 2px solid #ff9900;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top:100px;
-    display:flex;
-    gap:20px;
-  }
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+}
 
 
-/* Position the sidebar relative to the centered container */
 .sidebar {
-    position: -webkit-sticky; /* For Safari support */
     position: sticky;
-    top: 260px;               /* Sticks vertically at this offset */
+    top: 100px;
     width: 220px;
     background-color: white;
     padding: 20px 15px 20px 20px;
     border-right: 2px solid #ddd;
-    /* Note: without fixed positioning, the sidebar's horizontal position
-       will be determined by its place in the flex layout */
-  }
-
-
-/* Main content offset so it doesn't overlap the sidebar */
-.main-content {
-    flex: 1;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Image container ensures the whole image box is visible */
-  .image-container {
-    width: 100%;
-    max-width: 800px;  /* Set to your desired maximum width */
-    margin: 0 auto;
-    overflow: hidden;  /* prevents overflow */
-    border-radius: 10px;
-  }
-  
-  /* Ensure the image scales responsively without overflowing */
-  .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;  /* shows the entire image */
-  }
-.example-image-container {
-    padding-top: 20px;
-  width: 100%;
-  max-width: 800px;       /* Same as your image-container max-width */
-  margin: 20px auto 0 auto; /* Adjust top margin as needed */
-  overflow: hidden;       /* Keeps the image contained */
-  border-radius: 10px;
+    height: fit-content;
 }
 
-.example-image-container img {
-  width: 100%;
-  height: auto;
-  max-height: 350px; 
-  object-fit: contain;
-  background-color: #D4E1F1;
-  border-radius: 10px;
-}
-
-
-/* Info blocks container to match the image container */
-.info-blocks {
-    max-width: 800px;
-    margin: 40px auto; /* Centers the container and adds vertical spacing */
-  }
-  
-  /* Each info block as a flex container */
-  .info-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 20px;
-  }
-  
-  /* Left column: header and paragraph */
-  .info-text {
-    /* Reserve enough width so that the image column aligns with the main image's right edge.
-       For example, if .info-image is 150px wide plus a 10px gap, subtract that from 100%. */
-    width: calc(100% - 160px);
-    text-align: left;
-  }
-  
-  /* Right column: image */
-  .info-image {
-    width: 300px;  /* Set this width as needed */
-    margin-left: 10px;  /* Gap between text and image */
-  }
-  
-  .info-image img {
-    height: auto;
-    max-width:200px;
-    object-fit: contain;
-  }
-
-
-
-
-
-  /* Ensure title aligns with the image by using same max-width and auto margins */
-.page-title {
-    max-width: 800px;       /* Same as image-container max-width */
-    margin: 20px auto 0 auto; /* 20px top margin (adjust if needed) and centered */
-    text-align: left;       /* Left-align the title text */
-    font-size: 2em;         /* Adjust font-size as desired */
-    font-weight: bold;
-  }
-  
-  /* Script block with a 100px margin on top */
-  .page-script {
-    max-width: 800px;       /* Keep the same width as the image and title */
-    margin: 70px auto 0 auto; /* 100px margin-top to separate it from the title */
-    text-align: left;       /* Left-align the script text */
-    font-size: 1.3em;         /* Adjust styling as needed */
-    border-bottom: 2px solid #ddd;
-    /* Optional: remove right-side border radius for a straight edge */
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-
-
-/* Ensure spacing between main sections */
 .sidebar ul {
     text-align: left;
     list-style-type: none;
-    padding-left: 40px;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 5px; /* Reduce top margin */
+    padding-left: 20px;
+    font-size: 16px;
+    margin-top: 5px;
 }
-/* Remove link styling inside sidebar */
+
 .sidebar a {
-    text-decoration: none; /* Removes underline */
-    color: black; /* Changes text color to black */
-    font-weight: normal;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 3px 5px;
+    border-radius: 3px;
+    transition: all 0.3s;
 }
 
-
-/* Optional: Add hover effect */
 .sidebar a:hover {
-    color: #ff9900; /* Changes color on hover */
+    color: #ff9900;
+    background-color: #f9f9f9;
+}
+
+.sidebar a.active {
+    background-color: #FFF4B9;
+    font-weight: bold;
 }
 
 
-/* Reduce spacing between nested lists */
-details ul {
-    margin-top: 3px; /* Reduce space between parent and child list */
-    margin-bottom: 3px;
-}
-
-
-/* Reduce spacing between list items */
-.sidebar ul li {
-    margin-bottom: 4px; /* Less space between each list item */
-}
-
-
-/* Remove default browser arrow */
 summary {
     display: flex;
     align-items: center;
@@ -339,46 +149,167 @@ summary {
     cursor: pointer;
     outline: none;
     list-style: none;
-    padding: 3px 0; /* Reduce padding to bring items closer */
+    padding: 3px 0;
+    margin-bottom: 5px;
 }
-
 
 summary::-webkit-details-marker {
     display: none;
 }
 
-
-/* Adjust arrow spacing and animation */
-summary i {
-    margin-right: 8px;
-    transition: transform 0.3s ease;
-}
-
-
-/* Rotate arrow when details is open */
-details[open] > summary i {
-    transform: rotate(90deg);
-    background-color: #FFF4B9;
-}
-
-
-/* Indent nested lists */
 details details {
     margin-left: 15px;
-    margin-top: 3px; /* Reduce vertical spacing */
+    margin-top: 3px;
     margin-bottom: 3px;
 }
 
 
-/* 🔹 로고와 텍스트를 가로 정렬 */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.example-image-container {
+    padding-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.example-image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    background-color: #D4E1F1;
+    border-radius: 10px;
+}
+
+
+.info-blocks {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.info-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-text {
+    width: calc(100% - 220px);
+    text-align: left;
+}
+
+.info-text h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info-text h5 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.info-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.info-image {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.info-image img:hover {
+    transform: scale(1.05);
+}
+
+
+.page-title {
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.page-title h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.page-script {
+    max-width: 800px;
+    margin: 10px auto 30px auto;
+    text-align: left;
+    padding: 0 10px 15px 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.page-script p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+footer {
+    background: #fff;
+    border-top: 2px solid #ddd;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
 .logo-info {
     display: flex;
     align-items: center;
-    gap: 20px; /* 로고와 텍스트 사이 간격 */
+    gap: 20px;
 }
 
 .footer-logo {
-    width: 150px; /* 로고 크기 */
+    width: 150px;
 }
 
 .footer-info p {

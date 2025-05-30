@@ -174,21 +174,17 @@ body {
   }
 
 
-/* Position the sidebar relative to the centered container */
 .sidebar {
-    position: -webkit-sticky; /* For Safari support */
+    position: -webkit-sticky; 
     position: sticky;
-    top: 260px;               /* Sticks vertically at this offset */
-    width: 220px;
+    top: 260px;               
+    width: 250px;
     background-color: white;
     padding: 20px 15px 20px 20px;
     border-right: 2px solid #ddd;
-    /* Note: without fixed positioning, the sidebar's horizontal position
-       will be determined by its place in the flex layout */
   }
 
 
-/* Main content offset so it doesn't overlap the sidebar */
 .main-content {
     flex: 1;
     padding: 20px;
@@ -196,28 +192,27 @@ body {
     z-index: 1;
   }
   
-  /* Image container ensures the whole image box is visible */
-  .image-container {
+.image-container {
     width: 100%;
-    max-width: 800px;  /* Set to your desired maximum width */
+    max-width: 800px;  
     margin: 0 auto;
-    overflow: hidden;  /* prevents overflow */
+    overflow: hidden;  
     border-radius: 10px;
   }
   
-  /* Ensure the image scales responsively without overflowing */
-  .image-container img {
+
+.image-container img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;  /* shows the entire image */
+    object-fit: contain;
   }
 .example-image-container {
     padding-top: 20px;
   width: 100%;
-  max-width: 800px;       /* Same as your image-container max-width */
-  margin: 20px auto 0 auto; /* Adjust top margin as needed */
-  overflow: hidden;       /* Keeps the image contained */
+  max-width: 800px;      
+  margin: 20px auto 0 auto; 
+  overflow: hidden;      
   border-radius: 10px;
 }
 
@@ -229,33 +224,30 @@ body {
 }
 
 
-/* Info blocks container to match the image container */
+
 .info-blocks {
     max-width: 800px;
-    margin: 40px auto; /* Centers the container and adds vertical spacing */
+    margin: 40px auto;
   }
   
-  /* Each info block as a flex container */
+
   .info-block {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin-bottom: 20px;
   }
   
-  /* Left column: header and paragraph */
+
   .info-text {
-    /* Reserve enough width so that the image column aligns with the main image's right edge.
-       For example, if .info-image is 150px wide plus a 10px gap, subtract that from 100%. */
     width: calc(100% - 160px);
     text-align: left;
   }
   
-  /* Right column: image */
+
   .info-image {
-    width: 300px;  /* Set this width as needed */
-    margin-left: 10px;  /* Gap between text and image */
+    width: 300px;  
+    margin-left: 10px;  
   }
   
   .info-image img {
@@ -268,30 +260,29 @@ body {
 
 
 
-  /* Ensure title aligns with the image by using same max-width and auto margins */
+  
 .page-title {
-    max-width: 800px;       /* Same as image-container max-width */
-    margin: 20px auto 0 auto; /* 20px top margin (adjust if needed) and centered */
-    text-align: left;       /* Left-align the title text */
-    font-size: 2em;         /* Adjust font-size as desired */
+    max-width: 800px;      
+    margin: 20px auto 0 auto; 
+    text-align: left;     
+    font-size: 2em;       
     font-weight: bold;
   }
   
-  /* Script block with a 100px margin on top */
+
   .page-script {
-    max-width: 800px;       /* Keep the same width as the image and title */
-    margin: 70px auto 0 auto; /* 100px margin-top to separate it from the title */
-    text-align: left;       /* Left-align the script text */
-    font-size: 1.3em;         /* Adjust styling as needed */
+    max-width: 800px;    
+    margin: 70px auto 0 auto; 
+    text-align: left;       
+    font-size: 1.3em;        
     border-bottom: 2px solid #ddd;
-    /* Optional: remove right-side border radius for a straight edge */
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
 
 
-/* Ensure spacing between main sections */
+
 .sidebar ul {
     text-align: left;
     list-style-type: none;
@@ -299,36 +290,35 @@ body {
     align-items: center;
     font-size: 18px;
     font-weight: 500;
-    margin-top: 5px; /* Reduce top margin */
+    margin-top: 5px; 
 }
-/* Remove link styling inside sidebar */
+
 .sidebar a {
-    text-decoration: none; /* Removes underline */
-    color: black; /* Changes text color to black */
+    text-decoration: none; 
+    color: black;
     font-weight: normal;
 }
 
 
-/* Optional: Add hover effect */
+
 .sidebar a:hover {
-    color: #ff9900; /* Changes color on hover */
+    color: #ff9900; 
 }
 
 
-/* Reduce spacing between nested lists */
 details ul {
-    margin-top: 3px; /* Reduce space between parent and child list */
+    margin-top: 3px; 
     margin-bottom: 3px;
 }
 
 
-/* Reduce spacing between list items */
+
 .sidebar ul li {
-    margin-bottom: 4px; /* Less space between each list item */
+    margin-bottom: 4px; 
 }
 
 
-/* Remove default browser arrow */
+
 summary {
     display: flex;
     align-items: center;
@@ -337,7 +327,7 @@ summary {
     cursor: pointer;
     outline: none;
     list-style: none;
-    padding: 3px 0; /* Reduce padding to bring items closer */
+    padding: 3px 0; 
 }
 
 
@@ -346,23 +336,167 @@ summary::-webkit-details-marker {
 }
 
 
-/* Adjust arrow spacing and animation */
+
 summary i {
     margin-right: 8px;
     transition: transform 0.3s ease;
 }
 
 
-/* Rotate arrow when details is open */
+
 details[open] > summary i {
     transform: rotate(90deg);
     background-color: #FFF4B9;
 }
 
 
-/* Indent nested lists */
+
 details details {
     margin-left: 15px;
-    margin-top: 3px; /* Reduce vertical spacing */
+    margin-top: 3px; 
     margin-bottom: 3px;
+}
+
+footer {
+    background: #fff;
+    border-top: 2px solid #ddd;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.logo-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 3px 0;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+
+.sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 260px;
+    width: 220px;
+    background-color: white;
+    padding: 20px 15px 20px 20px;
+    border-right: 2px solid #ddd;
+}
+
+
+.sidebar ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 20px; 
+    align-items: center;
+    font-size: 16px; 
+    font-weight: 500;
+    margin-top: 5px;
+    white-space: nowrap; 
+}
+
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    display: inline-block;
+    width: auto; 
+    overflow: visible; 
+
+
+.sidebar a:hover {
+    color: #ff9900;
+}
+
+.sidebar ul li {
+    margin-bottom: 4px;
+    white-space: nowrap;
+    width: auto;
+}
+
+
+.sidebar a.active {
+    background-color: #FFF4B9; 
+    display: block; 
+    padding: 3px 5px; 
+    border-radius: 3px; 
+    font-weight: bold; 
+}
+
+details[open] > summary i {
+    transform: rotate(90deg);
+    background-color: transparent; 
+}
+
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    display: block; 
+    padding: 3px 5px; 
+    border-radius: 3px; 
+    transition: background-color 0.3s; 
+}
+
+.sidebar a:hover:not(.active) {
+    color: #ff9900;
+    background-color: #f9f9f9;
 }
