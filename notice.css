@@ -95,9 +95,8 @@ body {
 
 .sub-nav ul li a:hover, .sub-nav ul li a.active {
     color: #EE7535;
-    border-bottom: 2px solid #EE7535;
+    border-bottom: 2px solid #EE7535; 
 }
-
 
 .main-container {
     max-width: 1200px;
@@ -107,7 +106,6 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
     border: 1px solid #ddd;
 }
-
 
 .slider-section {
     position: relative;
@@ -174,7 +172,6 @@ body {
     font-size: 20px;
     margin-bottom: 5px;
 }
-
 
 .calendar-section {
     margin-top: 50px;
@@ -299,7 +296,7 @@ body {
     color: #ccc;
 }
 
-
+/* 푸터 스타일 */
 footer {
     background: #fff;
     border-top: 2px solid #ddd;
@@ -316,15 +313,14 @@ footer {
     padding: 10px 20px;
 }
 
-
 .logo-info {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px; 
 }
 
 .footer-logo {
-    width: 150px;
+    width: 150px; 
 }
 
 .footer-info p {
@@ -369,9 +365,8 @@ footer {
 
 .highlight-text {
     font-weight: bold;
-    color: #EE7535;     
+    color: #EE7535; 
 }
-
 
 .content-container {
     display: flex;
@@ -600,7 +595,6 @@ footer {
 .apply-button:hover {
     background-color: #C0C0C0;
 }
-
 
 @media (max-width: 768px) {
     .header-container {
